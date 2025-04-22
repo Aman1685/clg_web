@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Styles */
+        .header-container {
+            display: flex;
+            align-items: center;
+            background-color: black;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .header-container img {
+            height: 100px; 
+            width: 100px; 
+            margin-right: 15px; 
+        }
+
+        .header-container h1 {
+            color: white; 
+            font-size: 24px;
+            padding-right: 1000px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        .navbar li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: black;
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li {
+            padding: 5px 0;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Styles */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        main h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        main h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        main ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        main li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        main li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="/images/collage__logo.jpg" alt="College Logo">
+            <h1>State Institute of Engineering and Technology</h1>
+        </div>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Mission & Vision</a></li>
+                        <li><a href="#">Administration</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Students ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Campus Life</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Faculty ▾</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Departments ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/undergraduate">Undergraduate Programs</a></li>
+                        <li><a href="/curriculum">Curriculum</a></li>
+                        <li><a href="#">Lab Facilities</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Media ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Event / Activities</a></li>
+                <li><a href="#">Tenders</a></li>
+                <li><a href="#">News / Announcements</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Engineering Department</h1>
+        <h2>Undergraduate Programs</h2>
+        <b>Welcome to the Engineering Department</b>
+        <p>
+            The Engineering Department at S.I.E.T Panchkula is dedicated to providing cutting-edge education in emerging technologies. Our undergraduate programs focus on artificial intelligence, cybersecurity, robotics, and automation, preparing students for careers in research, industry, and entrepreneurship.
+        </p>
+        <div>
+            <h3>Why Choose Engineering at S.I.E.T?</h3>
+            <ul>
+                <li>Industry-Focused Curriculum – Courses designed to meet the demands of future tech industries.</li>
+                <li>Advanced Labs & Research Centers – AI labs, cybersecurity training rooms, and robotics workshops.</li>
+                <li>Internship & Placement Support – Partnerships with top companies for hands-on training.</li>
+                <li>Expert Faculty & Mentors – Learn from professionals with research and industry expertise.</li>
+                <li>Student Clubs & Tech Events – Participate in hackathons, innovation challenges, and conferences.</li>
+                <li>Scholarships & Financial Aid – Merit-based scholarships and financial support for deserving students.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Undergraduate Programs Offered</h3>
+            <ul>
+                <li>
+                    <h4>Computer Science & Engineering (CSE) – AI & Machine Learning</h4>
+                    <p>Focus: Deep Learning, Neural Networks, Data Science, NLP, and Predictive Analytics.</p>
+                    <p>Labs: AI Research Lab, Data Analytics Lab, and Machine Learning Lab.</p>
+                    <p>Career Paths: AI Engineer, Data Scientist, Machine Learning Engineer, Research Scientist.</p>
+                </li>
+                <li>
+                    <h4>Computer Science & Engineering (CSE) – Cyber Security</h4>
+                    <p>Focus: Ethical Hacking, Network Security, Cryptography, Digital Forensics.</p>
+                    <p>Labs: Cybersecurity Training Lab, Ethical Hacking Lab, and Digital Forensics Lab.</p>
+                    <p>Career Paths: Cybersecurity Analyst, Ethical Hacker, Network Security Engineer.</p>
+                </li>
+                <li>
+                    <h4>Robotics & Automation</h4>
+                    <p>Focus: Industrial Robotics, IoT, Autonomous Systems, Control Systems, and AI in Robotics.</p>
+                    <p>Labs: Robotics & Automation Lab, Embedded Systems Lab, IoT Lab.</p>
+                    <p>Career Paths: Robotics Engineer, Automation Specialist, IoT Developer, Control System Engineer.</p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Our Facilities & Resources</h2>
+            <ul>
+                <li>High-Tech Laboratories – AI & ML labs, cybersecurity simulation centers, and robotics workshops.</li>
+                <li>Smart Classrooms – Interactive digital learning with AI-powered teaching tools.</li>
+                <li>Library & Digital Learning – Access to research journals, AI models, and cybersecurity tools.</li>
+                <li>Innovation Hub & Incubation Centers – Support for startup ideas and R&D projects</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

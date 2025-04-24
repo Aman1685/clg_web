@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - College</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    
+    .header-container {
+            display: flex;
+            align-items: center;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .header-container img {
+            height: 100px; 
+            width: 100px; 
+            margin-right: 15px;
+        }
+
+        .header-container h1 {
+            color: white; 
+            font-size: 24px;
+            padding-right: 1000px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        .navbar li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: black;
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li {
+            padding: 5px 0;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            text-decoration: underline;
+        }
+    
+    
+    .container-wide {
+      max-width: 700px;
+      padding: 100px 60px 40px 60px;
+      margin-left: 25%;
+    }
+
+    details {
+        background:rgba(106, 90, 205, 0.7);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 10px 15px;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+        color: #e0e0e0;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    summary {
+      font-size: 18px;
+      outline: none;
+      list-style: none;
+    }
+
+    details[open] {
+      background: #3a3a55;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1s ease;
+    }
+
+    .faq-content.open {
+      max-height: 500px;
+    }
+
+    .faq-content p {
+      font-weight: 400;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #c0c0d0;
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+    <body>
+
+        <header>
+            <div class="header-container">
+    
+                <img src="/images/collage__logo.jpg" alt="College Logo">
+                <h1>State Institute of Engineering and Technology</h1>
+            </div>
+    
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">About ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/mission">Mission & Vision</a></li>
+                            <li><a href="/administration">Administration</a></li>
+                            <li><a href="/overview">overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Students ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admission">Admissions</a></li>
+                            <li><a href="/Campus_life">Campus Life</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/Faculty_Profiles">Faculty ▾</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Departments ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/undergraduate">Undergraduate Programs</a></li>
+                            <li><a href="/curriculum">Curriculum</a></li>
+                            <li><a href="#">Lab Facilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Media ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Photo_Gallery">Gallery</a></li>
+                            <li><a href="/videos">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/event">Event / Activities</a></li>
+                    <li><a href="/tender">Tenders</a></li>
+                    <li><a href="/news">News / Announcements</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+     <div class="container container-wide">
+        <h1>Frequently Asked Questions</h1>
+
+    <!-- FAQ Items -->
+    <details>
+        <summary>▾What courses does the college offer?</summary>
+        <div class="faq-content">
+            <p>We offer a variety of undergraduate and postgraduate courses in Computer Science, AI & ML, Cyber Security, and more.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾How can I apply for admission?</summary>
+        <div class="faq-content">
+            <p>You can apply online through our admissions portal or contact the admissions office for assistance.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾What are the eligibility criteria for admission?</summary>
+        <div class="faq-content">
+            <p>Eligibility criteria vary by course. Generally, you need to have completed your higher secondary education with relevant subjects.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾Are there any scholarships available?</summary>
+        <div class="faq-content">
+            <p>Yes, the college offers merit-based and need-based scholarships. Please contact the financial aid office for details.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾How can I contact the college administration?</summary>
+        <div class="faq-content">
+            <p>▾You can reach us via the Contact Us page or call the administration office during working hours.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾What facilities are available on campus?</summary>
+        <div class="faq-content">
+            <p>Our campus includes modern labs, libraries, sports facilities, and student lounges to support your learning and extracurricular activities.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾What is the campus library's operating hours?</summary>
+        <div class="faq-content">
+            <p>The campus library is open from 8 AM to 10 PM on weekdays and 9 AM to 5 PM on weekends.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾Is there on-campus housing available?</summary>
+        <div class="faq-content">
+            <p>Yes, the college offers on-campus dormitories for students with various room options.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾Are internships provided through the college?</summary>
+        <div class="faq-content">
+            <p>We have partnerships with several companies to provide internship opportunities for students.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾What extracurricular activities are available?</summary>
+        <div class="faq-content">
+            <p>Students can participate in clubs, sports teams, cultural events, and volunteer programs.</p>
+        </div>
+    </details>
+    <details>
+        <summary>▾How do I access the student portal?</summary>
+        <div class="faq-content">
+            <p>The student portal can be accessed through the college website using your student credentials.</p>
+        </div>
+    </details>
+
+    <!-- Add more FAQs similarly -->
+
+    <h2>Have a question? Ask us!</h2>
+    <form id="faqQuestionForm" novalidate>
+      <label for="userQuestion">Your Question:</label>
+      <textarea id="userQuestion" name="userQuestion" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const allDetails = document.querySelectorAll("details");
+
+    allDetails.forEach((detail) => {
+      const summary = detail.querySelector("summary");
+      const content = detail.querySelector(".faq-content");
+
+      summary.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        // If already open, close it
+        const isOpen = detail.hasAttribute("open");
+
+        allDetails.forEach((other) => {
+          other.removeAttribute("open");
+          other.querySelector(".faq-content").classList.remove("open");
+        });
+
+        // Toggle current one
+        if (!isOpen) {
+          detail.setAttribute("open", "");
+          content.classList.add("open");
+        }
+      });
+    });
+
+    // Form submission
+    document.getElementById('faqQuestionForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const question = document.getElementById('userQuestion').value.trim();
+      if (!question) {
+        alert('Please enter your question before submitting.');
+        return;
+      }
+      alert('Thank you for your question! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

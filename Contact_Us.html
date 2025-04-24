@@ -5,57 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles1.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="server.js"></script>
 </head>
 <body>
     
     <div class="container">
         <h1>Contact Us</h1>
-<form id="contactForm" novalidate>
-            <h2>Please fill out the form below</h2>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required />
+            <form id="contactForm" novalidate>
+                <h2>Please fill out the form below</h2>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required />
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" />
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" />
 
-            <label for="department">Department:</label>
-            <select id="department" name="department" required>
-                <option value="">Select Department</option>
-                <option value="computer science">Computer Science</option>
-            </select>
+                    <label for="department">Department:</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="computer science">Computer Science</option>
+                    </select>
 
-            <label for="branch">Branch:</label>
-            <select id="branch" name="branch" required>
-                <option value="">Select Branch</option>
-                <option value="ai&ml">AI & ML</option>
-                <option value="cyber security">Cyber Security</option>
-            </select>
+                    <label for="branch">Branch:</label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="ai&ml">AI & ML</option>
+                        <option value="cyber security">Cyber Security</option>
+                    </select>
 
-            <label for="rollNo">Roll No.:</label>
-            <input type="text" id="rollNo" name="rollNo" />
+                    <label for="rollNo">Roll No.:</label>
+                    <input type="text" id="rollNo" name="rollNo" />
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" />
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" />
 
-            <label for="year">Year of Study:</label>
-            <select id="year" name="year" required>
-                <option value="">Select Year</option>
-                <option value="1">1st Year</option>
-                <option value="2">2nd Year</option>
-                <option value="3">3rd Year</option>
-                <option value="4">4th Year</option>
-            </select>
+                    <label for="year">Year of Study:</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Send</button>
-        </form>
-        <div id="formMessage" class="form-message"></div>
+                    <button type="submit">Send</button>
+            </form>
+        
+            <div id="formMessage" class="form-message"></div>
+    
     </div>
+        
     <script src="script1.js"></script>
+
 </body>
 </html>

@@ -1,179 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
-    <style>
-        .header-container {
-            display: flex;
-            align-items: center;
-            background-color: black;
-            padding: 10px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Base Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-        .header-container img {
-            height: 100px; 
-            width: 100px; 
-            margin-right: 15px;
-        }
+    header {
+        background-color: black;
+        color: white;
+        padding: 10px 0;
+    }
 
-        .header-container h1 {
-            color: white; 
-            font-size: 24px;
-            padding-right: 1000px;
-        }
+    .header-container {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: black;
-            padding: 10px 0;
-            list-style: none;
-        }
+    .header-container img {
+        height: 100px; 
+        width: 100px; 
+        margin-right: 15px;
+    }
 
-        .navbar li {
-            position: relative;
-            margin: 0 15px;
-        }
+    .header-container h1 {
+        color: white; 
+        font-size: 24px;
+    }
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        padding: 10px 0;
+        list-style: none;
+    }
 
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: black;
-            list-style: none;
-            padding: 10px;
-            top: 100%;
-            left: 0;
-        }
+    .navbar li {
+        position: relative;
+        margin: 0 15px;
+    }
 
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
 
-        .dropdown-menu li {
-            padding: 5px 0;
-        }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: black;
+        list-style: none;
+        padding: 10px;
+        top: 100%;
+        left: 0;
+    }
 
-        .dropdown-menu a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 
-        .dropdown-menu a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .dropdown-menu li {
+        padding: 5px 0;
+    }
+
+    .dropdown-menu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-menu a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        padding: 20px;
+        background-color: #fff;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1, h2, h3, h4 {
+        color: #333;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Scroll Reveal Animation */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        will-change: opacity, transform;
+    }
+
+    .fade-in-section.visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Optional styling for spacing between modules */
+    .module {
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
+<header>
+  <div class="header-container">
+    <img src="/images/collage__logo.jpg" alt="College Logo">
+    <h1>State Institute of Engineering and Technology</h1>
+  </div>
+  <nav>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/mission">Mission & Vision</a></li>
+          <li><a href="/administration">Administration</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Students ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/admission">Admissions</a></li>
+          <li><a href="/Campus_life">Campus Life</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a href="/Faculty_Profiles">Faculty ▾</a></li>
+      <li class="dropdown">
+        <a href="#">Departments ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/undergraduate">Undergraduate Programs</a></li>
+          <li><a href="/curriculum">Curriculum</a></li>
+          <li><a href="#">Lab Facilities</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Media ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/Photo_Gallery">Gallery</a></li>
+          <li><a href="/videos">Videos</a></li>
+        </ul>
+      </li>
+      <li><a href="/event">Event / Activities</a></li>
+      <li><a href="/tender">Tenders</a></li>
+      <li><a href="/news">News / Announcements</a></li>
+    </ul>
+  </nav>
+</header>
 
-            <img src="/images/collage__logo.jpg" alt="College Logo">
-            <h1>State Institute of Engineering and Technology</h1>
-        </div>
+<main>
+  <section class="fade-in-section module">
+    <h1>Engineering Department</h1>
+    <h2>Undergraduate Programs</h2>
+    <b>Welcome to the Engineering Department</b>
+    <p>
+      The Engineering Department at S.I.E.T Panchkula is dedicated to providing cutting-edge education in emerging technologies.
+      Our undergraduate programs focus on artificial intelligence, cybersecurity, robotics, and automation, preparing students for careers in research, industry, and entrepreneurship.
+    </p>
+  </section>
 
-        <nav>
-            <ul class="navbar">
-                <li><a href="/">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">About ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/mission">Mission & Vision</a></li>
-                        <li><a href="/administration">Administration</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Students ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/admission">Admissions</a></li>
-                        <li><a href="/Campus_life">Campus Life</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="/Faculty_Profiles">Faculty ▾</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Departments ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/undergraduate">Undergraduate Programs</a></li>
-                        <li><a href="/curriculum">Curriculum</a></li>
-                        <li><a href="#">Lab Facilities</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Media ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/Photo_Gallery">Gallery</a></li>
-                        <li><a href="/videos">Videos</a></li>
-                    </ul>
-                </li>
-                <li><a href="/event">Event / Activities</a></li>
-                <li><a href="/tender">Tenders</a></li>
-                <li><a href="/news">News / Announcements</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Engineering Department</h1>
-        <h2>Undergraduate Programs</h2>
-        <b>Welcome to the Engineering Department</b>
-        <p>
-            The Engineering Department at S.I.E.T Panchkula is dedicated to providing cutting-edge education in emerging technologies. Our undergraduate programs focus on artificial intelligence, cybersecurity, robotics, and automation, preparing students for careers in research, industry, and entrepreneurship.
-        </p>
-        <div>
-            <h3>Why Choose Engineering at S.I.E.T?</h3>
-            <ul>
-                <li>Industry-Focused Curriculum – Courses designed to meet the demands of future tech industries.</li>
-                <li>Advanced Labs & Research Centers – AI labs, cybersecurity training rooms, and robotics workshops.</li>
-                <li>Internship & Placement Support – Partnerships with top companies for hands-on training.</li>
-                <li>Expert Faculty & Mentors – Learn from professionals with research and industry expertise.</li>
-                <li>Student Clubs & Tech Events – Participate in hackathons, innovation challenges, and conferences.</li>
-                <li>Scholarships & Financial Aid – Merit-based scholarships and financial support for deserving students.</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Undergraduate Programs Offered</h3>
-            <ul>
-                <li>
-                    <h4>Computer Science & Engineering (CSE) – AI & Machine Learning</h4>
-                    <p>Focus: Deep Learning, Neural Networks, Data Science, NLP, and Predictive Analytics.</p>
-                    <p>Labs: AI Research Lab, Data Analytics Lab, and Machine Learning Lab.</p>
-                    <p>Career Paths: AI Engineer, Data Scientist, Machine Learning Engineer, Research Scientist.</p>
-                </li>
-                <li>
-                    <h4>Computer Science & Engineering (CSE) – Cyber Security</h4>
-                    <p>Focus: Ethical Hacking, Network Security, Cryptography, Digital Forensics.</p>
-                    <p>Labs: Cybersecurity Training Lab, Ethical Hacking Lab, and Digital Forensics Lab.</p>
-                    <p>Career Paths: Cybersecurity Analyst, Ethical Hacker, Network Security Engineer.</p>
-                </li>
-                <li>
-                    <h4>Robotics & Automation</h4>
-                    <p>Focus: Industrial Robotics, IoT, Autonomous Systems, Control Systems, and AI in Robotics.</p>
-                    <p>Labs: Robotics & Automation Lab, Embedded Systems Lab, IoT Lab.</p>
-                    <p>Career Paths: Robotics Engineer, Automation Specialist, IoT Developer, Control System Engineer.</p>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2>Our Facilities & Resources</h2>
-            <ul>
-                <li>High-Tech Laboratories – AI & ML labs, cybersecurity simulation centers, and robotics workshops.</li>
-                <li>Smart Classrooms – Interactive digital learning with AI-powered teaching tools.</li>
-                <li>Library & Digital Learning – Access to research journals, AI models, and cybersecurity tools.</li>
-                <li>Innovation Hub & Incubation Centers – Support for startup ideas and R&D projects</li>
-            </ul>
-        </div>
-    </main>
+  <section class="fade-in-section module">
+    <h3>Why Choose Engineering at S.I.E.T?</h3>
+    <ul>
+      <li>Industry-Focused Curriculum – Courses designed to meet the demands of future tech industries.</li>
+      <li>Advanced Labs & Research Centers – AI labs, cybersecurity training rooms, and robotics workshops.</li>
+      <li>Internship & Placement Support – Partnerships with top companies for hands-on training.</li>
+      <li>Expert Faculty & Mentors – Learn from professionals with research and industry expertise.</li>
+      <li>Student Clubs & Tech Events – Participate in hackathons, innovation challenges, and conferences.</li>
+      <li>Scholarships & Financial Aid – Merit-based scholarships and financial support for deserving students.</li>
+    </ul>
+  </section>
+
+  <section class="fade-in-section module">
+    <h3>Undergraduate Programs Offered</h3>
+    <ul>
+      <li>
+        <h4>Computer Science & Engineering (CSE) – AI & Machine Learning</h4>
+        <p>Focus: Deep Learning, Neural Networks, Data Science, NLP, and Predictive Analytics.</p>
+        <p>Labs: AI Research Lab, Data Analytics Lab, and Machine Learning Lab.</p>
+        <p>Career Paths: AI Engineer, Data Scientist, Machine Learning Engineer, Research Scientist.</p>
+      </li>
+      <li>
+        <h4>Computer Science & Engineering (CSE) – Cyber Security</h4>
+        <p>Focus: Ethical Hacking, Network Security, Cryptography, Digital Forensics.</p>
+        <p>Labs: Cybersecurity Training Lab, Ethical Hacking Lab, and Digital Forensics Lab.</p>
+        <p>Career Paths: Cybersecurity Analyst, Ethical Hacker, Network Security Engineer.</p>
+      </li>
+      <li>
+        <h4>Robotics & Automation</h4>
+        <p>Focus: Industrial Robotics, IoT, Autonomous Systems, Control Systems, and AI in Robotics.</p>
+        <p>Labs: Robotics & Automation Lab, Embedded Systems Lab, IoT Lab.</p>
+        <p>Career Paths: Robotics Engineer, Automation Specialist, IoT Developer, Control System Engineer.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="fade-in-section module">
+    <h2>Our Facilities & Resources</h2>
+    <ul>
+      <li>High-Tech Laboratories – AI & ML labs, cybersecurity simulation centers, and robotics workshops.</li>
+      <li>Smart Classrooms – Interactive digital learning with AI-powered teaching tools.</li>
+      <li>Library & Digital Learning – Access to research journals, AI models, and cybersecurity tools.</li>
+      <li>Innovation Hub & Incubation Centers – Support for startup ideas and R&D projects</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-in-section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
 </body>
 </html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SIET Panchkula - Mission, Vision & History</title>
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        /* CSS variables for easy theming */
+        :root {
+            --primary: #003366;       /* Main blue color */
+            --secondary: #e67e22;     /* Accent orange color */
+            --light: #f5f5f5;         /* Light background */
+            --dark: #333;              /* Dark text color */
+        }
+        
+        /* Basic reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* ===== HEADER STYLES ===== */
+        .page-header {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.9)), 
+                        url('siet-campus.jpg') center/cover;
+            color: white;
+            padding: 80px 0 50px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Breadcrumb navigation */
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        .breadcrumb li {
+            margin: 0 10px;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ===== MAIN CONTENT ===== */
+        .about-section {
+            padding: 60px 0;
+        }
+        
+        /* Section title with underline */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            display: inline-block;
+            color: var(--primary);
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        /* ===== TAB SYSTEM ===== */
+        .about-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tab-btn {
+            padding: 10px 25px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active,
+        .tab-btn:hover {
+            color: var(--primary);
+            border-bottom-color: var(--secondary);
+        }
+        
+        /* Tab content with fade animation */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* ===== MISSION SECTION ===== */
+        .mission-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .mission-text, .mission-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mission-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* ===== VISION SECTION ===== */
+        .vision-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .vision-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .vision-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        /* ===== HISTORY TIMELINE ===== */
+        .history-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            padding-left: 30px;
+        }
+        
+        /* Vertical line */
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+        
+        /* Timeline dots */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid var(--secondary);
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-year {
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        /* ===== RESPONSIVE ADJUSTMENTS ===== */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 60px 0 40px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .about-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons (loaded from CDN) => BTW its online css syyle sheet the emoji like icons 
+     (but not emoji it is vector icon)are all thanks to this (quite popular :D)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-header">
+        <div class="container">
+            <h1>About SIET Panchkula</h1>
+            <ul class="breadcrumb">
+                <!-- This is th elink to home page (remove if not neede) -->
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT SECTION ===== -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Institution</h2>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <div class="about-tabs">
+                <button class="tab-btn active" data-tab="mission">Mission</button>
+                <button class="tab-btn" data-tab="vision">Vision</button>
+                <button class="tab-btn" data-tab="history">History</button>
+            </div>
+            
+            <!-- ===== MISSION TAB CONTENT ===== -->
+            <div class="tab-content active" id="mission">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h3>Our Mission</h3>
+                        <p>SIET Panchkula is committed to providing quality technical education and fostering an environment that promotes innovation, research, and holistic development of students.</p>
+                        <p>We strive to:</p>
+                        <ul>
+                            <li>Deliver excellence in technical education through innovative teaching methodologies</li>
+                            <li>Develop competent professionals with strong ethical values</li>
+                            <li>Promote research and development activities</li>
+                            <li>Foster industry-academia collaboration</li>
+                            <li>Contribute to societal development through technical solutions</li>
+                        </ul>
+                        <p>Our mission is to empower students with knowledge, skills, and values that will enable them to succeed in their professional careers and make meaningful contributions to society.</p>
+                    </div>  
+                    <div class="mission-image">
+                        <!--Well i got no campus img -->
+                        <img src="siet-building.jpg" alt="SIET Campus">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ===== VISION TAB CONTENT ===== -->
+            <div class="tab-content" id="vision">
+                <h3 class="section-title">Our Vision for the Future</h3>
+                <div class="vision-cards">
+                    <div class="vision-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Academic Excellence</h3>
+                        <p>To be recognized as a premier institution for technical education, known for academic rigor and innovative teaching practices.</p>
+                    </div>
+                    <div class="vision-card">
+                        <i class="fas fa-flask"></i>
+                        <h3>Research & Innovation</h3>
+                        <p>To establish advanced research facilities and promote a culture of innovation among students and faculty.</p>
+                    </div>
+                    <div class="vision-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Industry Collaboration</h3>
+                        <p>To develop strong partnerships with industries for curriculum development, internships, and placement opportunities.</p>
+                    </div>
+                    <div class="vision-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Global Perspective</h3>
+                        <p>To prepare students for global challenges through international collaborations and exchange programs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ===== HISTORY TAB CONTENT ===== -->
+            <div class="tab-content" id="history">
+                <h3 class="section-title">Our Journey Through Time</h3>
+                <div class="history-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h3>Establishment</h3>
+                            <p>SIET Panchkula was founded to provide quality technical education.
+                                And affiliated to KUK.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h3>Got The First Batch</h3>
+                            <p>Its batch of AIML and CYS came consisting of 25+ students.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>Confirmation Of Building</h3>
+                            <p>Fondation and confirmation of building was done by Haryana Speaker Gian Chand Gupta</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>New Buds</h3>
+                            <p>New students joined us. With now over 130+ students in both AIML and CS branches</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAGE FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 SIET Panchkula. All Rights Reserved.</p>
+            <p>Affiliated to Kurukshetra University | Approved by AICTE</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all tab buttons and content sections
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            // Add click event to each tab button
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

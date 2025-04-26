@@ -18,6 +18,18 @@ app.get('/curriculum', (req, res) => {
     res.sendFile(path.join(__dirname, 'curriculum.html'));
 });
 
+app.get("/ai", (req, res) => {
+    res.sendFile(__dirname + "/ai.html");
+  });
+
+app.get("/cs", (req, res) => {
+    res.sendFile(__dirname + "/cs.html");
+  });
+
+app.get("/rb", (req, res) => {
+    res.sendFile(__dirname + "/rb.html");
+  });
+
 app.get('/Campus_life', (req, res) => {
     res.sendFile(path.join(__dirname, 'Campus_life.html'));
 });

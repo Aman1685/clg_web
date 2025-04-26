@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News - SIET PKL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      background-color: black;
+      padding: 10px;
+    }
+
+    .header-container img {
+      height: 100px;
+      width: 100px;
+      margin-right: 15px;
+    }
+
+    .header-container h1 {
+      color: white;
+      font-size: 24px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      padding: 10px 0;
+      list-style: none;
+      margin: 0;
+    }
+
+    .navbar li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: black;
+      list-style: none;
+      padding: 10px;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li {
+      padding: 5px 0;
+    }
+
+    .dropdown-menu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* Marquee Styles */
+    .marquee-wrapper {
+      width: 100%;
+      max-width: 600px;
+      height: 200px;
+      margin: 30px auto;
+      overflow: hidden;
+      border: 1px solid #444;
+      background: white;
+      position: relative;
+    }
+
+    .marquee {
+      display: flex;
+      flex-direction: column;
+      animation: scroll-up 10s linear infinite;
+      animation-play-state: running;
+    }
+
+    .marquee-wrapper:hover .marquee {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      padding: 10px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    .marquee-item a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .marquee-item:hover {
+      background: wheat;
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="/images/collage__logo.jpg" alt="College Logo" />
+      <h1>State Institute of Engineering and Technology</h1>
+    </div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown">
+          <a href="#">About ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Mission & Vision</a></li>
+            <li><a href="#">Administration</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Students ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Courses offered</a></li>
+            <li><a href="#">Academic Calendar</a></li>
+            <li><a href="#">Time Table</a></li>
+            <li><a href="#">Campus Life</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Departments ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Undergraduate Programs</a></li>
+            <li><a href="#">Curriculum</a></li>
+            <li><a href="#">Lab Facilities</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Tenders</a></li>
+        <li><a href="#">News / Announcements</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- News Marquee -->
+  <div class="marquee-wrapper">
+    <div class="marquee">
+      <div class="marquee-item">
+        <a href="#">ADMISSIONS OPEN</a>
+        <p>Last post by PM - 2 hours ago</p>
+      </div>
+      <div class="marquee-item">
+        <a href="#">Teachers students treaty</a>
+        <p>Last post by Aman - 1 day ago</p>
+      </div>
+      <div class="marquee-item">
+        <a href="#">Heavy Fight in college class canceled</a>
+        <p>Last post by Alok - 1 min ago</p>
+      </div>
+      <!-- Repeat for smooth infinite scroll -->
+      <div class="marquee-item">
+        <a href="#">ADMISSIONS OPEN</a>
+        <p>Last post by PM - 2 hours ago</p>
+      </div>
+      <div class="marquee-item">
+        <a href="#">Teachers students treaty</a>
+        <p>Last post by Aman - 1 day ago</p>
+      </div>
+      <div class="marquee-item">
+        <a href="#">Heavy Fight in college class canceled</a>
+        <p>Last post by Alok - 1 min ago</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

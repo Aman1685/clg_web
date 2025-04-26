@@ -6,127 +6,330 @@
     <title>College Website</title>
     <link rel="stylesheet" href="/css/styles.css">
     <style>
-        .header-container {
-            display: flex;
-            align-items: center;
-            background-color: black;
-            padding: 10px;
-        }
+      * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .header-container img {
-            height: 100px; 
-            width: 100px; 
-            margin-right: 15px;
-        }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+      color: #333;
+    }
 
-        .header-container h1 {
-            color: white; 
-            font-size: 24px;
-            padding-right: 1000px;
-        }
+    header {
+      background: linear-gradient(to right, #003366, #3cd7da);
+      padding: 15px 20px;
+      color: white;
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: black;
-            padding: 10px 0;
-            list-style: none;
-        }
+    .header-container {
+      display: flex;
+      align-items: center;
+    }
 
-        .navbar li {
-            position: relative;
-            margin: 0 15px;
-        }
+    .header-container img {
+      height: 80px;
+      margin-right: 15px;
+    }
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+    .header-container h1 {
+      font-size: 1.8rem;
+    }
 
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: black;
-            list-style: none;
-            padding: 10px;
-            top: 100%;
-            left: 0;
-        }
+    nav ul.navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #1f2937;
+      list-style: none;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
 
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
+    nav ul.navbar li {
+      margin: 0 15px;
+      position: relative;
+    }
 
-        .dropdown-menu li {
-            padding: 5px 0;
-        }
+    nav ul.navbar li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 6px 10px;
+      transition: 0.3s ease;
+    }
 
-        .dropdown-menu a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
+    nav ul.navbar li a:hover {
+      color: #60a5fa;
+    }
 
-        .dropdown-menu a:hover {
-            text-decoration: underline;
-        }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1f2937;
+      list-style: none;
+      padding: 10px;
+      z-index: 999;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li {
+      margin: 5px 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+.academic-box {
+  /* (not academic-box without dot) */
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.glow-button {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6), 0 0 10px rgba(6, 182, 212, 0.4);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.glow-button:hover {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.8), 0 0 20px rgba(6, 182, 212, 0.6);
+  transform: translateY(-5px) scale(1.05);
+}
+
+
+    /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .programs {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* Academic Schedule Styling */
+.academic-schedule {
+  width: 100%;
+  max-width: 950px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.academic-schedule thead {
+  background-color: #0f172a;
+  color: #fff;
+}
+
+.academic-schedule th,
+.academic-schedule td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.academic-schedule tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.academic-schedule th {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.academic-schedule td {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+#note {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
+ <!-- Header Section -->
+ <header>
+    <div class="header-container">
+      <img src="/images/collage__logo.jpg" alt="College Logo" />
+      <h1>State Institute of Engineering and Technology</h1>
+    </div>
+  </header>
 
-            <img src="/images/collage__logo.jpg" alt="College Logo">
-            <h1>State Institute of Engineering and Technology</h1>
-        </div>
+  <!-- Navigation -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/mission">Mission & Vision</a></li>
+          <li><a href="/administration">Administration</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Students ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/admission">Admissions</a></li>
+          <li><a href="/Campus_life">Campus Life</a></li>
+        </ul>
+      </li>
+      <li><a href="/Faculty_Profiles">Faculty</a></li>
+      <li class="dropdown">
+        <a href="#">Departments ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/undergraduate">Undergraduate Programs</a></li>
+          <li><a href=     academic">Curriculum</a></li>
+          <li><a href="#">Lab Facilities</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Media ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/Photo_Gallery">Gallery</a></li>
+          <li><a href="/videos">Videos</a></li>
+        </ul>
+      </li>
+      <li><a href="/event">Event / Activities</a></li>
+      <li><a href="/tender">Tenders</a></li>
+      <li><a href="/news">News / Announcements</a></li>
+    </ul>
+  </nav>
 
-        <nav>
-            <ul class="navbar">
-                <li><a href="/">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">About ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/mission">Mission & Vision</a></li>
-                        <li><a href="/administration">Administration</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Students ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/admission">Admissions</a></li>
-                        <li><a href="/Campus_life">Campus Life</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="/Faculty_Profiles">Faculty ▾</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Departments ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/undergraduate">Undergraduate Programs</a></li>
-                        <li><a href="/curriculum">Curriculum</a></li>
-                        <li><a href="#">Lab Facilities</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Media ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/Photo_Gallery">Gallery</a></li>
-                        <li><a href="/videos">Videos</a></li>
-                    </ul>
-                </li>
-                <li><a href="/event">Event / Activities</a></li>
-                <li><a href="/tender">Tenders</a></li>
-                <li><a href="/news">News / Announcements</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Academic Calendar Section -->
+<main>
+    <div class="academic-box">
+      <h2>📅 Academic Calendar</h2>
+      <p>
+        The academic calendar for the <strong>State Institute of Engineering and Technology</strong>, as per <strong>Kurukshetra University</strong>, is designed to provide a structured framework for the academic year. It includes important dates such as the start and end of semesters, examination periods, and holidays.<br>
+        For more detailed information, please refer to the link provided below:
+      </p>
+      <div class="cal">
+        <a href="/docs/Academic Calender.pdf" class="glow-button" download>📥 Academic Calendar</a>
+      </div>
+        
+<!-- Academic Schedule Table -->
+<table class="academic-schedule">
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Odd Semester</th>
+        <th>Even Semester</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1st Teaching Term</td>
+        <td>16.08.2024 to 26.10.2024</td>
+        <td>27.01.2025 to 08.03.2025</td>
+      </tr>
+      <tr>
+        <td>Intermediate Vacations (Diwali)</td>
+        <td>27.10.2024 to 03.11.2024</td>
+        <td>09.03.2025 to 16.03.2025 (Holi)</td>
+      </tr>
+      <tr>
+        <td>2nd Teaching Term</td>
+        <td>04.11.2024 to 13.12.2024</td>
+        <td>17.03.2025 to 28.05.2025</td>
+      </tr>
+      <tr>
+        <td>Practical Exams</td>
+        <td>14.12.2024 to 19.12.2024</td>
+        <td>30.05.2025 to 03.06.2025</td>
+      </tr>
+      <tr>
+        <td>Preparatory Break (for students)</td>
+        <td>20.12.2024 to 25.12.2024</td>
+        <td>04.06.2025 to 08.06.2025</td>
+      </tr>
+      <tr>
+        <td>Theory Exams</td>
+        <td>26.12.2024 to 25.01.2025</td>
+        <td>09.06.2025 to 30.06.2025</td>
+      </tr>
+      <tr>
+        <td>Winter Vacations</td>
+        <td>21.12.2024 to 31.12.2024</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Summer Vacations</td>
+        <td>—</td>
+        <td>02.06.2025 to 13.07.2025</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <main>
-        <h1>Academic Calender</h1>
-    </main>
+  <p id="note">
+    The number of working days in each semester is 90 days, excluding the examination period. The academic calendar is subject to change based on university guidelines and notifications. <br>
+    The students must adhere to the fullfillment of minimum attendance requirements as per university norms. <br>
+    Changes in the academic calendar will be communicated through official channels, including the college website and notice boards.
+  </p>
+    </div>
+  </main>
+  
 
 </body>
 </html>

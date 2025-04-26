@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Curriculum - SIET</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
     <link rel="stylesheet" href="/css/styles.css">
     <style>
-    /* Base Styles */
-    * {
+      * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -21,7 +20,7 @@
     }
 
     header {
-      background: linear-gradient(to right, #003366, #3cd7da);
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
       padding: 15px 20px;
       color: white;
     }
@@ -88,8 +87,10 @@
     main {
       padding: 20px;
     }
-    /* Curriculum Section Styling */
-    .curriculum-box {
+
+    /* AI Section Styling */
+
+    .ai{
       max-width: 960px;
       margin: 3rem auto;
       padding: 2.5rem;
@@ -100,19 +101,19 @@
       animation: fadeIn 1s ease-in-out;
     }
 
-    .curriculum-box h2 {
+    .ai h2{
       font-size: 2.5rem;
       color: #1e40af;
       margin-bottom: 1rem;
     }
 
-    .curriculum-box p {
+    .ai p{
       font-size: 1.1rem;
       margin-bottom: 1.25rem;
       color: #374151;
     }
 
-    .programs {
+    .curriculum{
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -140,14 +141,8 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .footer-note {
-      margin-top: 1.5rem;
-      font-style: italic;
-      color: #6b7280;
-    }
-
-    /* Animation */
-    @keyframes fadeIn {
+       /* Animation */
+       @keyframes fadeIn {
       0% {
         opacity: 0;
         transform: translateY(30px);
@@ -170,12 +165,13 @@
         align-items: center;
       }
     }
-  </style>
+
+    </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
+ <!-- Header Section -->
+ <header>
     <div class="header-container">
       <img src="/images/collage__logo.jpg" alt="College Logo" />
       <h1>State Institute of Engineering and Technology</h1>
@@ -219,40 +215,34 @@
       <li><a href="/event">Event / Activities</a></li>
       <li><a href="/tender">Tenders</a></li>
       <li><a href="/news">News / Announcements</a></li>
-    </ul>
+    </ul> 
   </nav>
 
-  <!-- Curriculum Section -->
+  <!-- ai Section -->
   <main>
-    <div class="curriculum-box">
-      <h2>📘 Curriculum</h2>
+    <div class="ai"> 
+      <h2>🔐 Cybersecurity </h2>
       <p>
-        Welcome to the curriculum page of the <strong>State Institute of Engineering and Technology</strong>.
-        Here you will find information about the courses offered, their structure, and other relevant details.
+        Welcome to the Cybersecurity section of the <strong>State Institute of Engineering and Technology.</strong>
+        Here, we explore the critical and dynamic world of cybersecurity. Our curriculum is designed to provide students with a comprehensive understanding of information security, cyber defense strategies, and digital protection, equipping them with the skills needed to excel in this rapidly evolving field.
+        <br><br>
+        Our program covers a wide range of topics, following the latest trends and advancements in cybersecurity. Students will learn about network security, ethical hacking, cryptography, cyber laws, risk management, digital forensics, and more. Through hands-on projects and real-world applications, students will gain practical experience that prepares them for careers in cybersecurity.
+        <br><br>
+        We are committed to fostering innovation and critical thinking in our students, encouraging them to proactively address security challenges and protect digital infrastructures. Our faculty consists of experienced professionals and researchers who are passionate about cybersecurity, providing students with valuable insights and mentorship.
+        <br><br>
+        Join us on this exciting journey into the world of cybersecurity. Together, we will explore the limitless opportunities in securing our digital future and making the cyber world a safer place.
+        <br><br>
+        For more information about the curriculum of the Cybersecurity program, please refer to the link below:
+        <br><br>
       </p>
-
-      <p>Our B.Tech programs in:</p>
-
-      <div class="programs" >
-        <a href="/ai" class="program">🤖 Artificial Intelligence & Machine Learning</a>
-        <a href="/cs" class="program">🔐 Cybersecurity</a>
-        <a href="/rb" class="program">⚙️ Robotics & Automation</a>
+      
+      <div class="curriculum">
+        <a href="/docs/common.pdf" class="program"> First Year(N.E.P)</a>
+        <a href="/docs/1st-yr-non.pdf" class="program"> First Year(Non N.E.P)</a>
+        <a href="/docs/2nd-yr-AIML.pdf" class="program"> Second Year</a>
+        <a href="/docs/3rd year.pdf" class="program"> Third Year</a>
+        <a href="/docs/4th-yr-CS.pdf" class="program"> Fourth Year</a>
       </div>
-
-      <p>
-        follow the latest curriculum prescribed by <strong>Kurukshetra University (KUK)</strong>.
-      </p>
-
-      <p>
-        Designed to meet industry standards and academic excellence, each program blends theoretical knowledge with
-        practical skills to ensure our students are well-prepared for real-world challenges.
-      </p>
-
-      <p class="footer-note">
-        These programs are organized semester-wise and include core subjects, electives, labs, projects, and internship opportunities as per KUK’s academic framework.
-      </p>
     </div>
-  </main>
-
 </body>
 </html>

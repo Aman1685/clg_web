@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <style>
       * {
       box-sizing: border-box;
@@ -141,6 +141,31 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
+       /* Animation */
+       @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .programs {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
     </style>
 </head>
 <body>
@@ -190,7 +215,7 @@
       <li><a href="/event">Event / Activities</a></li>
       <li><a href="/tender">Tenders</a></li>
       <li><a href="/news">News / Announcements</a></li>
-    </ul>
+    </ul> 
   </nav>
 
   <!-- ai Section -->
@@ -216,7 +241,7 @@
         <a href="/docs/1st-yr-non.pdf" class="program"> First Year(Non N.E.P)</a>
         <a href="/docs/2nd-yr-AIML.pdf" class="program"> Second Year</a>
         <a href="/docs/3rd year.pdf" class="program"> Third Year</a>
-        <a href="/docs/4th year.pdf" class="program"> Fourth Year</a>
+        <a href="/docs/4th-ye-AIML.pdf" class="program"> Fourth Year</a>
       </div>
     </div>
 </body>

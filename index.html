@@ -6,7 +6,184 @@
     <title>College Website</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/default.css">
-   
+
+    <style>
+      /* Slides css */
+      html, body {
+        margin: 0; padding: 0;
+        width: 100%; height: 100%;
+      }
+      .slider {
+        position: relative;
+        width: 100%;
+        height: 75vh;
+        overflow: hidden;
+      }
+    .slides {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      flex-shrink: 0;
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 2.5rem;
+      width: 50px;
+      height: 80px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .prev { left: 20px; }
+    .next { right: 20px; }
+    .arrow:hover { background: rgba(0,0,0,0.7); }
+
+    /*section css*/
+
+    .fade-in-section.module {
+      display: flex;
+      align-items: flex-start;    /* top-align image & text */    
+      gap: 40px;                  /* space between image & text */
+      flex-wrap: wrap;           /* wrap on small screens */
+    }
+
+    #dr-principal {
+      margin-left: 100px;
+      width: 300px;
+      height: 300px;
+    }
+
+  .fade-in-section.module .container {
+      text-align: left;
+      max-width: 600px;  /* cap how wide the text can grow */
+      font-size: 1rem; /* increase text size for readability */
+      font-weight: 400; /* make text bold */
+    }
+
+    .links {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        font-size: 14px;
+        margin-right: 10px;
+        color: white;
+        display: block; 
+        text-align: center;
+        padding-left: 70px;
+        padding-right: 70px;
+        border-radius: 5px;
+    }
+
+    #news-link {
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: white;
+        background-color: #165480;
+        border-radius: 3px;
+        background-color: #165480;
+    }
+
+    #news-link:hover {
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: white;
+        background-color: #93bbda;
+    }
+
+    .marquee-wrapper {
+      max-width: 600px;
+      height: 250px;
+      margin: 30px auto;
+      overflow: hidden;
+      border: 1px solid #444;
+      background: white;
+      position: relative;
+      background-color: white;
+      margin-top: 1px;
+      border-radius: 5px;     
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .marquee {
+      display: flex;
+      flex-direction: column;
+      animation: scroll-up 10s linear infinite;
+      animation-play-state: running;
+      background-color: white;
+    }
+
+    .marquee-wrapper:hover .marquee {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      padding: 30px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    .marquee-item a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .marquee-item:hover {
+      background: wheat;
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+/* Responsiveness: stack vertically on small screens */
+    @media (max-width: 768px) {
+  .   fade-in-section.module {
+      flex-direction: column;
+      align-items: center;
+    }
+    .fade-in-section.module .container {
+      text-align: center;
+      max-width: 90%;
+    }
+  }
+
+    /* Scroll Reveal Animation */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        will-change: opacity, transform;
+    }
+
+    .fade-in-section.visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Optional styling for spacing between modules */
+    .module {
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+    </style>
 </head>
 <body>
  <!-- Header Section -->
@@ -61,10 +238,125 @@
   </nav>
 
 
-    <main>
-        <h1>Welcome to the State Institute of Engineering and Technology</h1>
-        <p>Explore our various departments and programs, including our state-of-the-art facilities and cutting-edge courses.</p>
-    </main>
+  <main>
+    <section class="fade-in-section module">
+      <div class="slider">
+        <button class="arrow prev">‹</button>
+          <div class="slides">
+            <img src="/images/siet1.jpg" alt="Slide 1">
+            <img src="/images/siet.jpg"  alt="Slide 2">
+          </div>
+        <button class="arrow next">›</button>
+      </div>
+    </section>
+    
 
+    <section class="fade-in-section module">
+      <img src="/images/KK-Katraia.jpg" alt="dr principal" id="dr-principal">
+      <div class="container">
+        <div class="links">
+          <a href="/news" id="news-link">
+            <h2>News/Notice</h2>
+          </a>
+          <div class="marquee-wrapper">
+            <div class="marquee">
+              <div class="marquee-item">
+                <a href="#">ADMISSIONS OPEN</a>
+                <p>Last post by PM - 2 hours ago</p>
+              </div>
+              <div class="marquee-item">
+                <a href="#">Teachers students treaty</a>
+                <p>Last post by Aman - 1 day ago</p>
+              </div>
+              <div class="marquee-item">
+                <a href="#">Heavy Fight in college class canceled</a>
+                <p>Last post by Alok - 1 min ago</p>
+              </div>
+              <!-- Repeat for smooth infinite scroll -->
+              <div class="marquee-item">
+                <a href="#">ADMISSIONS OPEN</a>
+                <p>Last post by PM - 2 hours ago</p>
+              </div>
+              <div class="marquee-item">
+                <a href="#">Teachers students treaty</a>
+                <p>Last post by Aman - 1 day ago</p>
+              </div>
+              <div class="marquee-item">
+                <a href="#">Heavy Fight in college class canceled</a>
+                <p>Last post by Alok - 1 min ago</p>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        <p>
+          We aim to inculcate industrial skills amongst youth to empower them for gainful employment through technical & industrial education and to enhance productivity of formal and non-formal sector of economy. Our mission is to provide an outstanding holistic education for our students characterized by successful training and emotional well being that provide firm foundation for the next stage of their learning and fully prepare them for life in a rapidly changing 21st century.
+          <br><br>
+          <h2>Dr. K.K. Katraia</h2>
+          <p>Director Principal</p>
+          
+        </p>
+      </div>
+    </section>
+  
+    <section class="fade-in-section module">
+    </section>
+  
+    <section class="fade-in-section module">
+    </section>
+  
+    <section class="fade-in-section module">
+    </section>
+  </main>
+
+   <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, 
+    {
+      threshold: 0.1
+    });
+
+  document.querySelectorAll('.fade-in-section').forEach(section => {
+    observer.observe(section);
+  });
+
+//* Slider functionality */
+  (function() {
+    const slidesEl = document.querySelector('.slider .slides');
+    const slides   = Array.from(slidesEl.children);
+    const prevBtn  = document.querySelector('.slider .prev');
+    const nextBtn  = document.querySelector('.slider .next');
+    let   index    = 0;
+    const total    = slides.length;
+    const interval = 5000;
+
+   function goToSlide(i) {
+      index = (i + total) % total;
+      slidesEl.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+  // auto-advance
+    let timer = setInterval(() => goToSlide(index + 1), interval);
+
+  // arrow controls
+    prevBtn.addEventListener('click', () => {
+      clearInterval(timer);
+      goToSlide(index - 1);
+      timer = setInterval(() => goToSlide(index + 1), interval);
+    });
+    nextBtn.addEventListener('click', () => {
+      clearInterval(timer);
+      goToSlide(index + 1);
+      timer = setInterval(() => goToSlide(index + 1), interval);
+    });
+  })();
+
+   </script>
 </body>
 </html>

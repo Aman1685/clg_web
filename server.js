@@ -42,8 +42,8 @@ app.get('/Photo_Gallery', (req, res) => {
     res.sendFile(path.join(__dirname, 'Photo_Gallery.html'));
 });
 
-app.get('/Contact', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Contact.html'));
+app.get('/Contact_us', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Contact_Us.html'));
 });
 app.get('/mission', (req, res) => {
     res.sendFile(path.join(__dirname, 'mission.html'));

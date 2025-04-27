@@ -5,58 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>News - SIET PKL</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Base Styles */
+      * {
+      box-sizing: border-box;
       margin: 0;
-      background: #f4f4f4;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #003366, #3cd7da);
+      padding: 15px 20px;
+      color: white;
     }
 
     .header-container {
       display: flex;
       align-items: center;
-      background-color: black;
-      padding: 10px;
     }
 
     .header-container img {
-      height: 100px;
-      width: 100px;
+      height: 80px;
       margin-right: 15px;
     }
 
     .header-container h1 {
-      color: white;
-      font-size: 24px;
+      font-size: 1.8rem;
     }
 
-    .navbar {
+    nav ul.navbar {
       display: flex;
       justify-content: center;
-      background-color: black;
-      padding: 10px 0;
+      background-color: #1f2937;
       list-style: none;
-      margin: 0;
+      padding: 10px 0;
+      flex-wrap: wrap;
     }
 
-    .navbar li {
-      position: relative;
+    nav ul.navbar li {
       margin: 0 15px;
+      position: relative;
     }
 
-    .navbar a {
+    nav ul.navbar li a {
       color: white;
       text-decoration: none;
       font-size: 16px;
+      padding: 6px 10px;
+      transition: 0.3s ease;
+    }
+
+    nav ul.navbar li a:hover {
+      color: #60a5fa;
     }
 
     .dropdown-menu {
       display: none;
       position: absolute;
-      background-color: black;
-      list-style: none;
-      padding: 10px;
       top: 100%;
       left: 0;
+      background-color: #1f2937;
+      list-style: none;
+      padding: 10px;
+      z-index: 999;
     }
 
     .dropdown:hover .dropdown-menu {
@@ -64,17 +81,11 @@
     }
 
     .dropdown-menu li {
-      padding: 5px 0;
+      margin: 5px 0;
     }
 
-    .dropdown-menu a {
-      color: white;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-menu a:hover {
-      text-decoration: underline;
+    main {
+      padding: 20px;
     }
 
     /* Marquee Styles */
@@ -132,41 +143,50 @@
       <img src="/images/collage__logo.jpg" alt="College Logo" />
       <h1>State Institute of Engineering and Technology</h1>
     </div>
-
-    <nav>
-      <ul class="navbar">
-        <li><a href="/">Home</a></li>
-        <li class="dropdown">
-          <a href="#">About ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Mission & Vision</a></li>
-            <li><a href="#">Administration</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Students ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Admissions</a></li>
-            <li><a href="#">Courses offered</a></li>
-            <li><a href="#">Academic Calendar</a></li>
-            <li><a href="#">Time Table</a></li>
-            <li><a href="#">Campus Life</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Departments ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Undergraduate Programs</a></li>
-            <li><a href="#">Curriculum</a></li>
-            <li><a href="#">Lab Facilities</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Tenders</a></li>
-        <li><a href="#">News / Announcements</a></li>
-      </ul>
-    </nav>
   </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/about_overview">Overview</a></li>
+          <li><a href="/mission">Mission & Vision</a></li>
+          <li><a href="/administration">Administration</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Students ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/admission">Admissions</a></li>
+          <li><a href="/Campus_life">Campus Life</a></li>
+          <li><a href="/academics">Academic Calendar</a></li>
+        </ul>
+      </li>
+      <li><a href="/Faculty_Profiles">Faculty</a></li>
+      <li class="dropdown">
+        <a href="#">Departments ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/undergraduate">Undergraduate Programs</a></li>
+          <li><a href="/curriculum">Curriculum</a></li>
+          <li><a href="#">Lab Facilities</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Media ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/Photo_Gallery">Gallery</a></li>
+          <li><a href="/videos">Videos</a></li>
+        </ul>
+      </li>
+      <li><a href="/event">Event / Activities</a></li>
+      <li><a href="/tender">Tenders</a></li>
+      <li><a href="/news">News / Announcements</a></li>
+    </ul>
+  </nav>
+  
 
   <!-- News Marquee -->
   <div class="marquee-wrapper">

@@ -30,6 +30,10 @@ app.get("/rb", (req, res) => {
     res.sendFile(__dirname + "/rb.html");
   });
 
+app.get('/CoC', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Code of Conduct.html'));
+});
+
 app.get('/Campus_life', (req, res) => {
     res.sendFile(path.join(__dirname, 'Campus_life.html'));
 });
@@ -66,7 +70,11 @@ app.get('/academics', (req, res) => {
 });
 
 app.get('/Faculty_Profiles', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Faculty_Profiles.html'));
+    res.sendFile(path.join(__dirname, 'Faculty Profiles.html'));
+});
+
+app.get('/Faculty_Directory', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Faculty Directory.html'));
 });
 
 app.get('/videos', (req, res) => {

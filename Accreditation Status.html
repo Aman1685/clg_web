@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/default.css">
+    <style>
+    .content-container {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .content-container h2 {
+      font-size: 2.5rem;
+      color: #1e40af;
+      margin-bottom: 1rem;
+    }
+
+    .content-container p {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+      color: #374151;
+    }
+
+    .content-container a {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+   .content-container a {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .content-container a:hover {
+      background-color: #bae6fd;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+      /* Animation */
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    .content-container a{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+       <div class="header-container">
+         <img src="/images/collage__logo.jpg" alt="College Logo" />
+         <h1>State Institute of Engineering and Technology</h1>
+       </div>
+     </header>
+   
+     <!-- Navigation -->
+     <nav>
+       <ul class="navbar">
+         <li><a href="/">Home</a></li>
+         <li class="dropdown">
+           <a href="#">About ▾</a>
+           <ul class="dropdown-menu">
+             <li><a href="/about_overview">Overview</a></li>
+             <li><a href="/mission">Mission & Vision</a></li>
+             <li><a href="/administration">Administration</a></li>
+             <li><a href="/contact_us">Contact Us</a></li>
+             <li><a href="/accreditation">Accreditation Status</a></li>
+           </ul>
+         </li>
+         <li class="dropdown">
+           <a href="#">Students ▾</a>
+           <ul class="dropdown-menu">
+             <li><a href="/admission">Admissions</a></li>
+             <li><a href="/Campus_life">Campus Life</a></li>
+             <li><a href="/academics">Academic Calendar</a></li>
+             <li><a href="/CoC">Code of Conduct</a></li>
+           </ul>
+         </li>
+         <li class="dropdown">
+           <a href="#">Faculty ▾</a>
+           <ul class="dropdown-menu">
+             <li><a href="/Faculty_Directory">Faculty Directory</a></li>
+             <li><a href="/Faculty_Profiles">Faculty Profiles</a></li>
+           </ul>
+       </li>
+         <li class="dropdown">
+           <a href="#">Departments ▾</a>
+           <ul class="dropdown-menu">
+             <li><a href="/undergraduate">Undergraduate Programs</a></li>
+             <li><a href="/curriculum">Curriculum</a></li>
+             <li><a href="#">Lab Facilities</a></li>
+           </ul>
+         </li>
+         <li class="dropdown">
+           <a href="#">Media ▾</a>
+           <ul class="dropdown-menu">
+             <li><a href="/Photo_Gallery">Gallery</a></li>
+             <li><a href="/videos">Videos</a></li>
+           </ul>
+         </li>
+         <li><a href="/event">Event / Activities</a></li>
+         <li><a href="/tender">Tenders</a></li>
+         <li><a href="/news">News / Announcements</a></li>
+         <li><a href="/faq">FaQ</a></li>
+       </ul>
+     </nav>    
+
+        <!-- Main Content Section -->
+        <main>
+            <div class="content-container">
+                <h2>Accreditation Status</h2>
+                <p>The State Institute of Engineering and Technology is approved by AICTE for its undergraduate programs and is affiliated to Kurukshetra University.</p>
+                <p>We are committed to maintaining high standards of education and continuously improving our programs to meet the needs of our students and the industry.</p>
+                <a href="/docs/AICTE-LOA.pdf">AICTE approval</a>
+                <a href="/docs/KUK-Affiliation.pdf">KUK approval</a>
+            </div>
+        </main>
+</body>
+</html>

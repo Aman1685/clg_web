@@ -93,6 +93,13 @@ app.get('/news', (req, res) => {
     res.sendFile(path.join(__dirname, 'news.html'));
 });
 
+app.get('/faq',(req, res) => {
+    res.sendFile(path.join(__dirname, 'Faq.html'));
+});
+
+app.get('/accreditation',(req, res) => {
+    res.sendFile(path.join(__dirname, 'Accreditation Status.html'));
+});
 
     app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

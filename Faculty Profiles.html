@@ -6,6 +6,78 @@
     <title>Faculty_Profiles</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/default.css">
+    <style>
+      .faculty-profile-table {
+        width: 100%;
+        max-width: 950px;
+        margin: 2rem auto;
+        border-collapse: collapse;
+        font-family: 'Segoe UI', sans-serif;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-in-out
+      }
+
+      .box{
+        max-width: 960px;
+        margin: 3rem auto;
+        padding: 2.5rem;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .faculty-profile-table thead {
+        background-color: #0f172a;
+        color: #fff;
+      }
+
+      .faculty-profile-table th,
+      .faculty-profile-table td {
+          padding: 0.75rem 1rem;
+          text-align: center;
+          border-bottom: 1px solid #e2e8f0;
+      }
+
+      .faculty-profile-table tbody tr:nth-child(even) {
+          background-color: #f8fafc;
+      }
+
+      .faculty-profile-table th {
+          font-size: 1rem;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+      }
+
+      .faculty-profile-table td {
+          font-size: 0.95rem;
+          color: #334155;
+      }   
+
+      /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    </style>
 </head>
 <body>
  <!-- Header Section -->
@@ -37,6 +109,7 @@
           <li><a href="/Campus_life">Campus Life</a></li>
           <li><a href="/academics">Academic Calendar</a></li>
           <li><a href="/CoC">Code of Conduct</a></li>
+          <li><a href="/antiragging">Anti Ragging</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -67,34 +140,46 @@
       <li><a href="faq">FaQ</a></li>
     </ul>
   </nav>
+    
+  
+  <main>
+        
     <main>
-        <h1>Faculty Profiles</h1><fieldset><table style="border-collapse: collapse;">
-        <tbody>
+      <div class="box">
+        <h1>Faculty Profiles</h1>
+        <table style="border-collapse: collapse; width: 100%;" class="faculty-profile-table">
+          <thead>
             <tr>
-                <td style="border: 2px solid black; padding: 2px; text-align: center;"><strong>Name</strong></td>
-                <td style="border: 2px solid black; padding: 2px; text-align: center;"><strong>Designation</strong></td>
-                <td style="border: 2px solid black; padding: 2px; text-align: center;"><strong>Qualification</strong></td>
+              <th style="border: 2px solid black; padding: 2px; text-align: center;">Name</th>
+              <th style="border: 2px solid black; padding: 2px; text-align: center;">Designation</th>
+              <th style="border: 2px solid black; padding: 2px; text-align: center;">Qualification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid black; padding: 2px;">Dr. Milap Sharma</td>
+              <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
+              <td style="border: 1px solid black; padding: 2px;">Ph.D. , M.Tech, B.Tech</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 2px;">Dr. Milap Sharma</td>
-                <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
-                <td style="border: 1px solid black; padding: 2px;">Ph.D. , M.Tech, B.Tech</td>
-               </tr>
-               <tr>
-                <td style="border: 1px solid black; padding: 2px;">Mrs. Ankita Jiwan</td>
-                <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
-                <td style="border: 1px solid black; padding: 2px;">M.Tech, B.Tech</td>
+              <td style="border: 1px solid black; padding: 2px;">Mrs. Ankita Jiwan</td>
+              <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
+              <td style="border: 1px solid black; padding: 2px;">M.Tech, B.Tech</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 2px;">Dr. Divya Garg</td>
-                <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
-                <td style="border: 1px solid black; padding: 2px;">Ph.D. (CSE), M.Tech. (CSE), B.Tech. (CSE)</td>
+              <td style="border: 1px solid black; padding: 2px;">Dr. Divya Garg</td>
+              <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
+              <td style="border: 1px solid black; padding: 2px;">Ph.D. (CSE), M.Tech. (CSE), B.Tech. (CSE)</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 2px;">Mrs. Priyanka Diwan Goyal</td>
-                <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
-                <td style="border: 1px solid black; padding: 2px;">M.Tech(CSE), B.Tech(CSE)</td>
-        </tbody></table></fieldset>
+              <td style="border: 1px solid black; padding: 2px;">Mrs. Priyanka Diwan Goyal</td>
+              <td style="border: 1px solid black; padding: 2px;">Assistant Professor (Guest Faculty)</td>
+              <td style="border: 1px solid black; padding: 2px;">M.Tech(CSE), B.Tech(CSE)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
     </main>
 
 </body>

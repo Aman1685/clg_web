@@ -6,6 +6,110 @@
     <title>Faculty_Directory</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/default.css">
+
+    <style>
+
+      .cal {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .button {
+        background: linear-gradient(135deg, #3b82f6, #06b6d4);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem 2rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6), 0 0 10px rgba(6, 182, 212, 0.4);
+        transition: all 0.4s ease;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background: linear-gradient(135deg, #2563eb, #0ea5e9);
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.8), 0 0 20px rgba(6, 182, 212, 0.6);
+        transform: translateY(-5px) scale(1.05);
+      }
+
+      .faculty-box{
+        max-width: 960px;
+        margin: 3rem auto;
+        padding: 2.5rem;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+      .faculty-directory-table {
+        width: 100%;
+        max-width: 950px;
+        margin: 2rem auto;
+        border-collapse: collapse;
+        font-family: 'Segoe UI', sans-serif;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-in-out
+      }
+
+      .faculty-directory-table thead {
+        background-color: #0f172a;
+        color: #fff;
+      }
+
+      .faculty-directory-table th,
+      .faculty-directory-table td {
+          padding: 0.75rem 1rem;
+          text-align: center;
+          border-bottom: 1px solid #e2e8f0;
+      }
+
+      .faculty-directory-table tbody tr:nth-child(even) {
+          background-color: #f8fafc;
+      }
+
+      .faculty-directory-table th {
+          font-size: 1rem;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+      }
+
+      .faculty-directory-table td {
+          font-size: 0.95rem;
+          color: #334155;
+      }   
+
+      /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    </style>
 </head>
 <body>
  <!-- Header Section -->
@@ -37,6 +141,7 @@
           <li><a href="/Campus_life">Campus Life</a></li>
           <li><a href="/academics">Academic Calendar</a></li>
           <li><a href="/CoC">Code of Conduct</a></li>
+          <li><a href="/antiragging">Anti Ragging</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -70,34 +175,46 @@
         
 
     <main>
+      <div class="faculty-box">
         <h1>Faculty Directory</h1>
-        <table style="border-collapse: collapse;">
+        <table style="border-collapse: collapse;" class="faculty-directory-table">
+          <thead>
+             <tr>
+                <th style="border: 2px solid black; text-align: center; padding: 2px;"><strong>Name</strong></td>
+                <th style="border: 2px solid black; text-align: center; padding: 5px;"><strong>Contact Number</strong></td>
+                <th style="border: 2px solid black; text-align: center; padding: 2px;"><strong>Email Address</strong></td>
+            </tr>
+          </thead>
+          
+          <tbody>
             <tr>
-                <td style="border: 2px solid black; text-align: center; padding: 2px;"><strong>Name</strong></td>
-                <td style="border: 2px solid black; text-align: center; padding: 5px;"><strong>Contact Number</strong></td>
-                <td style="border: 2px solid black; text-align: center; padding: 2px;"><strong>Email Address</strong></td>
+              <td style="border: 1px solid black; padding: 2px;;">Milap Sharma</td>
+              <td style="border: 1px solid black; padding: 2px;">9*********</td>
+              <td style="border: 1px solid black; padding: 2px;">milaps**a@gmail.com</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 2px;;">Milap Sharma</td>
-                <td style="border: 1px solid black; padding: 2px;">9*********</td>
-                <td style="border: 1px solid black; padding: 2px;">milaps**a@gmail.com</td>
+              <td style="border: 1px solid black; padding: 2px;">Ankita Jiwan</td>
+              <td style="border: 1px solid black; padding: 2px;">7*********</td>
+              <td style="border: 1px solid black; padding: 2px;">ankit*****@gmail.com</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 2px;">Ankita Jiwan</td>
-                <td style="border: 1px solid black; padding: 2px;">7*********</td>
-                <td style="border: 1px solid black; padding: 2px;">ankit*****@gmail.com</td>
+              <td style="border: 1px solid black; padding: 2px;">Divya Garg</td>
+              <td style="border: 1px solid black; padding: 2px;">8*********</td>
+              <td style="border: 1px solid black; padding: 2px;">divy****@gmail.com</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 2px;">Divya Garg</td>
-                <td style="border: 1px solid black; padding: 2px;">8*********</td>
-                <td style="border: 1px solid black; padding: 2px;">divy****@gmail.com</td>
+              <td style="border: 1px solid black; padding: 2px;">Priyanka Diwan Goyal</td>
+              <td style="border: 1px solid black; padding: 2px;">6*********</td>
+              <td style="border: 1px solid black; padding: 2px;">priy****@gmail.com</td>
             </tr>
-            <tr>
-                <td style="border: 1px solid black; padding: 2px;">Priyanka Diwan Goyal</td>
-                <td style="border: 1px solid black; padding: 2px;">6*********</td>
-                <td style="border: 1px solid black; padding: 2px;">priy****@gmail.com</td>
-            </tr>
+          </tbody>
         </table>
+
+        <div class="cal">
+          <a href="/docs/Staff.pdf" class="button" download>Download Staff List</a>
+        </div>
+      </div>
+        
     </main>
 
 </body>

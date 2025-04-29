@@ -34,6 +34,10 @@ app.get('/CoC', (req, res) => {
     res.sendFile(path.join(__dirname, 'Code of Conduct.html'));
 });
 
+app.get('/antiragging',(req,res)=>{
+    res.sendFile(path.join(__dirname,"/AntiRagging.html"));
+});
+
 app.get('/Campus_life', (req, res) => {
     res.sendFile(path.join(__dirname, 'Campus_life.html'));
 });

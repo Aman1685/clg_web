@@ -8,6 +8,14 @@
   <link rel="stylesheet" href="/css/default.css" />
   <style>
 
+    .main{
+      background-image: url('/images/siet.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+    }
+
     /* Contact Form */
     .container {
       max-width: 500px;
@@ -16,6 +24,7 @@
       background-color: white;
       border-radius: 15px;
       box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
     }
 
     .container h1 {
@@ -94,6 +103,27 @@
       font-size: 1.3rem;
       color: green;
     }
+
+     /* Animation */
+     @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
 
@@ -116,8 +146,8 @@
           <li><a href="/about_overview">Overview</a></li>
           <li><a href="/mission">Mission & Vision</a></li>
           <li><a href="/administration">Administration</a></li>
-          <li><a href="/contact_us"></a></li>
-          <li><a href="/accreditation">Acceriditation Status</a></li>
+          <li><a href="/contact_us">Contact Us</a></li>
+          <li><a href="/accreditation">Accreditation Status</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -136,7 +166,7 @@
           <li><a href="/Faculty_Directory">Faculty Directory</a></li>
           <li><a href="/Faculty_Profiles">Faculty Profiles</a></li>
         </ul>
-      </li>      
+    </li>
       <li class="dropdown">
         <a href="#">Departments ▾</a>
         <ul class="dropdown-menu">
@@ -159,58 +189,60 @@
     </ul>
   </nav>
 
-
   <!-- Contact Form -->
-  <div class="container">
-    <h1>Contact Us</h1>
-    <h2>We'd love to hear from you</h2>
-
-    <form id="contactForm">
-      <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
-
-      <label for="department">Department:</label>
-      <select id="department" name="department" required>
-        <option value="">Select Department</option>
-        <option value="Computer Science">Computer Science</option>
-      </select>
-
-      <label for="branch">Branch:</label>
-      <select id="branch" name="branch" required>
-        <option value="">Select Branch</option>
-        <option value="AI&ML">AI & ML</option>
-        <option value="Cyber Security">Cyber Security</option>
-      </select>
-
-      <label for="rollNo">Roll No.:</label>
-      <input type="text" id="rollNo" name="rollNo" placeholder="Enter your roll number">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-
-      <label for="year">Year of Study:</label>
-      <select id="year" name="year" required>
-        <option value="">Select Year</option>
-        <option value="1st Year">1st Year</option>
-        <option value="2nd Year">2nd Year</option>
-        <option value="3rd Year">3rd Year</option>
-        <option value="4th Year">4th Year</option>
-      </select>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-
-    <div class="form-message" id="formMessage"></div>
+  <div class="main">
+    <div class="container" >
+      <h1>Contact Us</h1>
+      <h2>We'd love to hear from you</h2>
+  
+      <form id="contactForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+  
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+  
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+          <option value="">Select Department</option>
+          <option value="Computer Science">Computer Science</option>
+        </select>
+  
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required>
+          <option value="">Select Branch</option>
+          <option value="AI&ML">AI & ML</option>
+          <option value="Cyber Security">Cyber Security</option>
+        </select>
+  
+        <label for="rollNo">Roll No.:</label>
+        <input type="text" id="rollNo" name="rollNo" placeholder="Enter your roll number">
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+  
+        <label for="year">Year of Study:</label>
+        <select id="year" name="year" required>
+          <option value="">Select Year</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+  
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+  
+        <button type="submit">Send</button>
+      </form>
+  
+      <div class="form-message" id="formMessage"></div>
+    </div>
   </div>
+  
 
   <!-- Link to JS if needed -->
   <script src="script1.js"></script>

@@ -75,3 +75,18 @@
   .dropdown-menu li {
     margin: 5px 0;
   }
+
+  .footer {
+    background: linear-gradient(to right, #003366, #3cd7da);
+    color: rgb(20, 19, 19);
+    padding: 40px 0 20px;
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+}
+
+.footer p {
+    margin-top: 20px;
+    opacity: 0.8;
+    padding-left: 120px ;
+}

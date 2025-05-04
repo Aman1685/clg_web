@@ -1,69 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Curriculum - SIET</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/default.css">
+
     <style>
-    /* Curriculum Section Styling */
-    .curriculum-box {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 2.5rem;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
+.tender-box {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  animation: fadeIn 1s ease-in-out;
+}
 
-    .curriculum-box h2 {
-      font-size: 2.5rem;
-      color: #1e40af;
-      margin-bottom: 1rem;
-    }
+.tender-box h2 {
+  font-size: 1.8rem;
+  color: #165480;
+  margin-bottom: 20px;
+}
 
-    .curriculum-box p {
-      font-size: 1.1rem;
-      margin-bottom: 1.25rem;
-      color: #374151;
-    }
+.tender-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
 
-    .programs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .program {
-      background-color: #e0f2fe;
-      color: #0369a1;
-      border-radius: 12px;
-      padding: 1rem 1.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.3s ease;
-    }
-
-    .program:hover {
-      background-color: #bae6fd;
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .footer-note {
-      margin-top: 1.5rem;
-      font-style: italic;
-      color: #6b7280;
-    }
 
     /* Animation */
     @keyframes fadeIn {
@@ -89,12 +56,11 @@
         align-items: center;
       }
     }
-  </style>
+    </style>
 </head>
 <body>
-
-  <!-- Header Section -->
-  <header>
+ <!-- Header Section -->
+ <header>
     <div class="header-container">
       <img src="/images/collage__logo.jpg" alt="College Logo" />
       <h1>State Institute of Engineering and Technology</h1>
@@ -154,34 +120,19 @@
     </ul>
   </nav>
 
-  <!-- Curriculum Section -->
+
   <main>
-    <div class="curriculum-box">
-      <h2>📘 Curriculum</h2>
-      <p>
-        Welcome to the curriculum page of the <strong>State Institute of Engineering and Technology</strong>.
-        Here you will find information about the courses offered, their structure, and other relevant details.
-      </p>
-
-      <p>Our B.Tech programs in:</p>
-
-      <div class="programs" >
-        <a href="/ai" class="program">🤖 Artificial Intelligence & Machine Learning</a>
-        <a href="/cs" class="program">🔐 Cybersecurity</a>
+    <div class="tender-box">
+      <h2>📜 Tenders</h2>
+      <div class="tender-content">
+        <p>
+          Welcome to the Tenders section of our website. Here, you can find all the latest tenders and procurement opportunities available at our institution.
+        </p>
+        <p>
+          For more information, please contact us at 
+          <a href="mailto:sietpkl@gmail.com">sietpkl@gmail.com</a>.
+        </p>
       </div>
-
-      <p>
-        follow the latest curriculum prescribed by <strong>Kurukshetra University (KUK)</strong>.
-      </p>
-
-      <p>
-        Designed to meet industry standards and academic excellence, each program blends theoretical knowledge with
-        practical skills to ensure our students are well-prepared for real-world challenges.
-      </p>
-
-      <p class="footer-note">
-        These programs are organized semester-wise and include core subjects, electives, labs, projects, and internship opportunities as per KUK’s academic framework.
-      </p>
     </div>
   </main>
 
@@ -191,6 +142,6 @@
         <p>Affiliated to Kurukshetra University | Approved by AICTE</p>
     </div>
 </footer>
-
+  
 </body>
 </html>

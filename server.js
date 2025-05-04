@@ -86,7 +86,7 @@ app.get('/videos', (req, res) => {
 });
 
 app.get('/event', (req, res) => {
-    res.sendFile(path.join(__dirname, 'event.html'));
+    res.sendFile(path.join(__dirname, 'events.html'));
 });
 
 app.get('/tender', (req, res) => {
@@ -103,6 +103,10 @@ app.get('/faq',(req, res) => {
 
 app.get('/accreditation',(req, res) => {
     res.sendFile(path.join(__dirname, 'Accreditation Status.html'));
+});
+
+app.get('/time_table',(req, res) => {
+    res.sendFile(path.join(__dirname, 'Time_table.html'));  
 });
 
     app.listen(PORT, () => {

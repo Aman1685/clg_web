@@ -1,79 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Website</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/default.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Website</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/default.css">
+  <style>
+    img.responsive {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <div class="header-container">
+      <img src="/images/collage__logo.jpg" alt="College Logo">
+      <h1>State Institute of Engineering and Technology</h1>
+    </div>
+  </header>
 
-    <header>
-        <div class="header-container">
+  <nav>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/about_overview">Overview</a></li>
+          <li><a href="/mission">Mission & Vision</a></li>
+          <li><a href="/administration">Administration</a></li>
+          <li><a href="/contact_us">Contact Us</a></li>
+          <li><a href="/accreditation">Accreditation Status</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Students ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/admission">Admissions</a></li>
+          <li><a href="/Campus_life">Campus Life</a></li>
+          <li><a href="/academics">Academic Calendar</a></li>
+          <li><a href="/CoC">Code of Conduct</a></li>
+          <li><a href="/antiragging">Anti Ragging</a></li>
+          <li><a href="/time_table">Time Table</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Faculty ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/Faculty_Directory">Faculty Directory</a></li>
+          <li><a href="/Faculty_Profiles">Faculty Profiles</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Departments ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/undergraduate">Undergraduate Programs</a></li>
+          <li><a href="/curriculum">Curriculum</a></li>
+          <li><a href="#">Lab Facilities</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Media ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/Photo_Gallery">Gallery</a></li>
+        </ul>
+      </li>
+      <li><a href="/event">Event / Activities</a></li>
+      <li><a href="/tender">Tenders</a></li>
+      <li><a href="/news">News / Announcements</a></li>
+      <li><a href="/faq">FAQ</a></li>
+    </ul>
+  </nav>
 
-            <img src="/images/collage__logo.jpg" alt="College Logo">
-            <h1>State Institute of Engineering and Technology</h1>
-        </div>
-    </header>
-    
-    <nav>
-      <ul class="navbar">
-        <li><a href="/">Home</a></li>
-        <li class="dropdown">
-          <a href="#">About ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="/about_overview">Overview</a></li>
-            <li><a href="/mission">Mission & Vision</a></li>
-            <li><a href="/administration">Administration</a></li>
-            <li><a href="/contact_us">Contact Us</a></li>
-            <li><a href="/accreditation">Accreditation Status</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Students ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="/admission">Admissions</a></li>
-            <li><a href="/Campus_life">Campus Life</a></li>
-            <li><a href="/academics">Academic Calendar</a></li>
-            <li><a href="/CoC">Code of Conduct</a></li>
-            <li><a href="/antiragging">Anti Ragging</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Faculty ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="/Faculty_Directory">Faculty Directory</a></li>
-            <li><a href="/Faculty_Profiles">Faculty Profiles</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Departments ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="/undergraduate">Undergraduate Programs</a></li>
-            <li><a href="/curriculum">Curriculum</a></li>
-            <li><a href="#">Lab Facilities</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Media ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="/Photo_Gallery">Gallery</a></li>
-            <li><a href="/videos">Videos</a></li>
-          </ul>
-        </li>
-        <li><a href="/event">Event / Activities</a></li>
-        <li><a href="/tender">Tenders</a></li>
-        <li><a href="/news">News / Announcements</a></li>
-        <li><a href="faq">FaQ</a></li>
-      </ul>
-    </nav> 
+  <main id="timetable-section">
+    <h1>Time Table</h1>
+    <img src="/images/time_table.jpg" alt="College Time Table" class="responsive">
+  </main>
 
-    <main>
-        <h1>Time Table</h1>
-        <img src="images/time_table.jpg" height="500px" width="900px">
-    </main>
-
+  <footer class="footer">
+    <div class="container">
+        <p>© 2023 SIET Panchkula. All Rights Reserved.</p>
+        <p>Affiliated to Kurukshetra University | Approved by AICTE</p>
+    </div>
+</footer>
 </body>
 </html>

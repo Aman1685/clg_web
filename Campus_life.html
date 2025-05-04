@@ -6,6 +6,76 @@
     <title>College Website</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/default.css">
+    <style>
+      .content-container {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.content-container h1 {
+  font-size: 2.5rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
+}
+
+.content-container p {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
+
+.content-container a {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.content-container a:hover {
+  background-color: #bae6fd;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-container a {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+    </style>
 </head>
 <body>
 
@@ -39,6 +109,7 @@
           <li><a href="/academics">Academic Calendar</a></li>
           <li><a href="/CoC">Code of Conduct</a></li>
           <li><a href="/antiragging">Anti Ragging</a></li>
+          <li><a href="/time_table">Time Table</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -59,7 +130,6 @@
         <a href="#">Media ▾</a>
         <ul class="dropdown-menu">
           <li><a href="/Photo_Gallery">Gallery</a></li>
-          <li><a href="/videos">Videos</a></li>
         </ul>
       </li>
       <li><a href="/event">Event / Activities</a></li>
@@ -70,23 +140,33 @@
   </nav>
 
 
-    <main>
-        h1>Campus Life</h1>
-        <p>Welcome to the Campus Life section of our college website! Here, you will find information about the vibrant and engaging campus life we offer to our students.</p>
-        <p>Our campus is not just a place for academic learning; it's a community where students can grow, connect, and thrive. From extracurricular activities to student organizations, we provide a wide range of opportunities for students to get involved and make the most of their college experience.</p>
-        <p>Whether you're interested in sports, arts, culture, or community service, there's something for everyone. Our campus is home to various clubs and organizations that cater to diverse interests, allowing students to pursue their passions and develop new skills.</p>
-        <p>We also host numerous events throughout the year, including workshops, seminars, cultural festivals, and sports competitions. These events foster a sense of belonging and camaraderie among students, creating lasting memories and friendships.</p>
-        <p>Explore our campus life section to learn more about the various activities, clubs, and events that make our college a vibrant place to study and grow. We look forward to welcoming you to our campus!</p>
-        <p>For more information, feel free to reach out to our student affairs office or visit our campus tour page.</p>
-        <p>Thank you for visiting our Campus Life section!</p>
-        <p>Best regards,</p>
-        <p>The Campus Life Team</p>
-        <p>State Institute of Engineering and Technology</p>
-        <p>Contact: <a href="mailto:0172-2929871">0172-2929871</a></p>
-        <p>Website: <a href="https://www.siet.ac.in">www.siet.ac.in</a></p>
-        <p>Address: State Institute of Engineering and Technology, Sector 26, Chandigarh, India</p>
-        
-    </main>
+  <main>
+    <div class="content-container">
+      <h1>Campus Life</h1>
+      <p>Welcome to the Campus Life section of our college website! Here, you will find information about the vibrant and engaging campus life we offer to our students.</p>
+      <p>Our campus is not just a place for academic learning; it's a community where students can grow, connect, and thrive. From extracurricular activities to student organizations, we provide a wide range of opportunities for students to get involved and make the most of their college experience.</p>
+      <p>Whether you're interested in sports, arts, culture, or community service, there's something for everyone. Our campus is home to various clubs and organizations that cater to diverse interests, allowing students to pursue their passions and develop new skills.</p>
+      <p>We also host numerous events throughout the year, including workshops, seminars, cultural festivals, and sports competitions. These events foster a sense of belonging and camaraderie among students, creating lasting memories and friendships.</p>
+      <p>Explore our campus life section to learn more about the various activities, clubs, and events that make our college a vibrant place to study and grow. We look forward to welcoming you to our campus!</p>
+      <p>For more information, feel free to reach out to our student affairs office or visit our campus tour page.</p>
+      <p>Thank you for visiting our Campus Life section!</p>
+      <p>Best regards,</p>
+      <p>The Campus Life Team</p>
+      <p><strong>State Institute of Engineering and Technology</strong></p>
+      <p>Contact: <a href="tel:0172-2929871">0172-2929871</a></p>
+      <p>Website: <a href="/" target="_self">siet Panchkula</a></p>
+      <p>Address: State Institute of Engineering and Technology, Sector 26, Panchkula, India</p>
+    </div>
+    
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>© 2023 SIET Panchkula. All Rights Reserved.</p>
+      <p>Affiliated to Kurukshetra University | Approved by AICTE</p>
+    </div>
+  </footer>
+  
 
 </body>
 </html>

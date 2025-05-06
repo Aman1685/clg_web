@@ -1,385 +1,56 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Anti-Ragging-SIET PKL</title>
-
-    <link rel="stylesheet" href="/css/styles.css">
-
-    <link rel="stylesheet" href="/css/default.css">
-
-
-
-    <style>
-
-
-
-      .cal {
-
-        display: flex;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 1.5rem;
-
-        margin: 2rem 0;
-
-      }
-
-
-
-      .button {
-
-        background: linear-gradient(135deg, #3b82f6, #06b6d4);
-
-        color: white;
-
-        border: none;
-
-        border-radius: 12px;
-
-        padding: 1rem 2rem;
-
-        font-weight: 700;
-
-        font-size: 1.2rem;
-
-        text-decoration: none;
-
-        display: inline-flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6), 0 0 10px rgba(6, 182, 212, 0.4);
-
-        transition: all 0.4s ease;
-
-        cursor: pointer;
-
-      }
-
-
-
-      .button:hover {
-
-        background: linear-gradient(135deg, #2563eb, #0ea5e9);
-
-        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.8), 0 0 20px rgba(6, 182, 212, 0.6);
-
-        transform: translateY(-5px) scale(1.05);
-
-      }
-
-
-
-      .Content-box{
-
-        max-width: 960px;
-
-        margin: 3rem auto;
-
-        padding: 2.5rem;
-
-        background: #ffffff;
-
-        border-radius: 16px;
-
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-
-        text-align: center;
-
-        animation: fadeIn 1s ease-in-out;
-
-      }
-
-      .Content-box h1{
-
-        color: #021525e6;
-
-      }
-
-
-
-      .Content-box p{
-
-        color: #00060e;
-
-      }
-
-
-
-      #note {
-
-        margin-top: 1.5rem;
-
-        font-style: italic;
-
-        color: #6b7280;
-
-        font-size: 0.9rem;
-
-        line-height: 1.5;
-
-      }
-
-
-
-      /* Animation */
-
-    @keyframes fadeIn {
-
-      0% {
-
-        opacity: 0;
-
-        transform: translateY(30px);
-
-      }
-
-      100% {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-      }
-
-    }
-
-
-
-    /* Responsive */
-
-    @media (max-width: 768px) {
-
-      .header-container {
-
-        flex-direction: column;
-
-        text-align: center;
-
-      }
-
-    }
-
-
-
-    </style>
-
-</head>
-
-<body>
-
-
-
-    <header>
-
-        <div class="header-container">
-
-          <img src="/images/collage__logo.jpg" alt="College Logo" />
-
-          <h1>State Institute of Engineering and Technology</h1>
-
-        </div>
-
-      </header>
-
-    
-
-      <!-- Navigation -->
-
-      <nav>
-
-        <ul class="navbar">
-
-          <li><a href="/">Home</a></li>
-
-          <li class="dropdown">
-
-            <a href="#">About ▾</a>
-
-            <ul class="dropdown-menu">
-
-              <li><a href="/about_overview">Overview</a></li>
-
-              <li><a href="/mission">Mission & Vision</a></li>
-
-              <li><a href="/administration">Administration</a></li>
-
-              <li><a href="/contact_us">Contact Us</a></li>
-
-              <li><a href="/accreditation">Accreditation Status</a></li>
-
-            </ul>
-
-          </li>
-
-          <li class="dropdown">
-
-            <a href="#">Students ▾</a>
-
-            <ul class="dropdown-menu">
-
-              <li><a href="/admission">Admissions</a></li>
-
-              <li><a href="/Campus_life">Campus Life</a></li>
-
-              <li><a href="/academics">Academic Calendar</a></li>
-
-              <li><a href="/CoC">Code of Conduct</a></li>
-
-              <li><a href="/antiragging">Anti Ragging</a></li>
-
-              <li><a href="/time_table">Time Table</a></li>
-
-            </ul>
-
-          </li>
-
-          <li class="dropdown">
-
-            <a href="#">Faculty ▾</a>
-
-            <ul class="dropdown-menu">
-
-              <li><a href="/Faculty_Directory">Faculty Directory</a></li>
-
-              <li><a href="/Faculty_Profiles">Faculty Profiles</a></li>
-
-            </ul>
-
-        </li>
-
-          <li class="dropdown">
-
-            <a href="#">Departments ▾</a>
-
-            <ul class="dropdown-menu">
-
-              <li><a href="/undergraduate">Undergraduate Programs</a></li>
-
-              <li><a href="/curriculum">Curriculum</a></li>
-
-            </ul>
-
-          </li>
-
-          <li class="dropdown">
-
-            <a href="#">Media ▾</a>
-
-            <ul class="dropdown-menu">
-
-              <li><a href="/Photo_Gallery">Gallery</a></li>
-
-            </ul>
-
-          </li>
-
-          <li><a href="/event">Event / Activities</a></li>
-
-          <li><a href="/tender">Tenders</a></li>
-
-          <li><a href="/news">News / Announcements</a></li>
-
-          <li><a href="/faq">FaQ</a></li>
-
-        </ul>
-
-      </nav>
-
-        
-
-        <!-- Main Content -->
-
-    <main>
-
-      <div class="Content-box">
-
-        <h1>Code of Conduct</h1>
-
-            <p> 
-
-              As the students are aware, Govt. of India and State Govt. of Haryana have already banned the ragging of newly admitted students in all the Professional Institutions.
-
-              As per instructions of the State Govt. stern anti ragging disciplinary action is to be taken against the students indulging in ragging of the students, including 
-
-              expulsion from the Institute and hostels/mess or fine with a public apology or withholding of scholarships or other benefits,
-
-              debarring from representation in events, withholding results, and debarring from campus recruitment/industrial training in view of involvement of some seniors 
-
-              students in ragging of 1st year students in some of the Institutions in the previous years. Hon’ble Supreme Court of India has directed the concerned Institutions/Universities 
-
-              to take immediate steps for the prevention of ragging in future. The violation of this law (ban on ragging) is not only punishable by a sum of Rs.25, 000/- but also by 
-
-              rigorous imprisonment of 3 years. In order to curb the ragging, the Institute takes various steps such as helping the local administration for keeping vigilance in the University, 
-
-              senior students are advised individually and group to keep a watch on students indulging in ragging and cooperation of their parents is also sought explaining the aspects of punishment 
-
-              for violation of law of ban on ragging, by deputing faculty members at different places in the Institute to check the ragging during day and also up to midnight. The following 
-
-              will be treated as the act of ragging “any disorderly conduct whether by words, spoken or written or by an act which has the effect of teasing, treaking or handling with rudeness 
-
-              any other student(s), indulging in roudy or undisciplined activities which causes or is likely to cause annoyance, hardship or psychological harm or raise fear or apprehension 
-
-              thereof in fresher or junior student(s) or asking the student(s) to do any act or perform something, which such student(s) will not do in the ordinary course and which has the 
-
-              effect of causing or generating a sense of shame or embarrassment so as to adversely effect the physique or psyche of a fresher or a junior student.
-
-            </p>
-
-
-
-            <div class="cal">
-
-              <a href="/docs/Anti_Ragging.pdf" class="button" >Anti-Ragging</a>
-
-            </div>
-
-            
-
-            
-
-            <p id="note">
-
-              Strict Action shuld be taken if there will be any violation of the above. <br>
-
-              For more information visit, <a href="https://www.education.gov.in/" target="_blank">https://www.education.gov.in/</a> , <a href="https://www.ugc.gov.in/" target="_blank">https://www.ugc.gov.in/</a> , <br>
-
-              <a href="www.antiragging.in" target="_blank">www.antiragging.in</a> and  <a href="www.c4yindia.org" target="_blank">www.c4yindia.org</a>
-
-            </p>
-
-      </div>
-
-    </main>
-
-
-
-    <footer class="footer">
-
-      <div class="container">
-
-          <p>© 2023 SIET Panchkula. All Rights Reserved.</p>
-
-          <p>Affiliated to Kurukshetra University | Approved by AICTE</p>
-
-      </div>
-
-  </footer>
-
-
-
-</body>
-
-</html
+<main>
+  <div class="Content-box">
+    <h1>Code of Conduct</h1>
+
+    <p>
+      The Government of India and the State Government of Haryana have strictly banned ragging in all professional institutions. As per official directives, stern disciplinary actions will be taken against any student found indulging in ragging activities.
+    </p>
+
+    <p>
+      Disciplinary measures may include:
+    </p>
+    <ul style="text-align: left; margin-left: 2rem;">
+      <li>Expulsion from the institute and hostels/mess</li>
+      <li>Imposition of fines and public apologies</li>
+      <li>Withholding scholarships or academic results</li>
+      <li>Debarring from events, campus placements, or industrial training</li>
+    </ul>
+
+    <p>
+      As per the Supreme Court of India, institutions must take immediate and effective measures to curb ragging. Violation of anti-ragging laws may lead to a fine of ₹25,000 and up to 3 years of imprisonment.
+    </p>
+
+    <p>
+      The institute actively monitors and prevents ragging by:
+    </p>
+    <ul style="text-align: left; margin-left: 2rem;">
+      <li>Deploying faculty members for vigilance, even during late hours</li>
+      <li>Seeking parental cooperation to ensure compliance</li>
+      <li>Briefing senior students about consequences and legal actions</li>
+    </ul>
+
+    <p><strong>Definition of Ragging:</strong></p>
+    <p>
+      Any disorderly conduct by words, actions, or written material that:
+    </p>
+    <ul style="text-align: left; margin-left: 2rem;">
+      <li>Causes psychological or physical harm to junior students</li>
+      <li>Generates a sense of fear, shame, or embarrassment</li>
+      <li>Induces students to perform acts they wouldn’t do ordinarily</li>
+      <li>Disrupts the peace or safety of the institution</li>
+    </ul>
+
+    <div class="cal">
+      <a href="/docs/Anti_Ragging.pdf" class="button">Download Anti-Ragging Policy</a>
+    </div>
+
+    <p id="note">
+      Strict action will be taken against any violation.<br>
+      For more information, visit:
+      <a href="https://www.education.gov.in/" target="_blank">education.gov.in</a>,
+      <a href="https://www.ugc.gov.in/" target="_blank">ugc.gov.in</a>,
+      <a href="https://www.antiragging.in" target="_blank">antiragging.in</a>, and
+      <a href="https://www.c4yindia.org" target="_blank">c4yindia.org</a>.
+    </p>
+  </div>
+</main>

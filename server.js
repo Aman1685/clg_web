@@ -109,6 +109,10 @@ app.get('/time_table',(req, res) => {
     res.sendFile(path.join(__dirname, 'Time_table.html'));  
 });
 
+app.get('COC',(req, res) => {
+    res.sendFile(path.join(__dirname, 'Code of Conduct.html'));  
+});)
+
     app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

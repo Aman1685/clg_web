@@ -110,7 +110,7 @@ app.get('/time_table',(req, res) => {
 });
 
 app.get('/CoC',(req, res) => {
-    res.sendFile(path.join(__dirname, 'code of conduct.html'));  
+    res.sendFile(path.join(__dirname, 'code_of_conduct.html'));  
 });
 
     app.listen(PORT, () => {

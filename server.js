@@ -109,7 +109,7 @@ app.get('/time_table',(req, res) => {
     res.sendFile(path.join(__dirname, 'Time_table.html'));  
 });
 
-app.get('CoC',(req, res) => {
+app.get('/CoC',(req, res) => {
     res.sendFile(path.join(__dirname, 'code of conduct.html'));  
 });
 

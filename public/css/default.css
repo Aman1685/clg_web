@@ -83,6 +83,7 @@
     text-align: center;
     position: relative;
     font-weight: 500;
+    align-item: bottom;
 }
 
 .footer p {
